@@ -26,12 +26,16 @@ export function UsersPage() {
 					введите имя{" "}
 					<input type="text" value={searchName} onChange={handleSearchName} />
 				</label>
-
-				{filteredUsers.map(({ id, fullName }) => (
-					<Link to={`/users/${id}`} key={id}>
-						{fullName}
-					</Link>
-				))}
+				<div className="users__usersList">
+					{filteredUsers.map(({ id, avatar, fullName }) => (
+						<Link className="link" to={`/users/${id}`} key={id}>
+							<img className="link__userPhoto" src={avatar} alt="User's photo" />
+							<h3 className="link__username">
+								{fullName}
+							</h3>
+						</Link>
+					))}
+				</div>
 			</div>
 		</div>
 	);
