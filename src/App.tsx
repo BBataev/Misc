@@ -6,13 +6,15 @@ import { Playlists } from "./pages/PlaylistsPage/PlaylistsPage";
 export function App() {
 	return (
 		<BrowserRouter>
-			<div className="header">_</div>
+			<div className="header">
+				<Link className="header__logo" to={"/"}>Misc</Link>
+			</div>
 
 			<div className="section">
 				<nav className="navMenu">
-					<Link to={"/"}>Main</Link>
-					<Link to={"/users"}>Users</Link>
-					<Link to={"/playlists"}>Playlists</Link>
+					<Link className="navMenu__link" to={"/"}>Main</Link>
+					<Link className="navMenu__link" to={"/users"}>Users</Link>
+					<Link className="navMenu__link" to={"/playlists"}>Playlists</Link>
 				</nav>
 
 				<main className="content">

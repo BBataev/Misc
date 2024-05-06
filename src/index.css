@@ -1,10 +1,88 @@
+/* Font-Connection */
+
+@font-face {
+    font-family: "Inter";
+    src: local("Inter-Thin"),
+      url("../font/Inter-Thin.ttf");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-ExtraLight"),
+      url("../font/Inter-ExtraLight.ttf");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-Light"),
+      url("../font/Inter-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-Regular"),
+      url("../font/Inter-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-Medium"),
+      url("../font/Inter-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-SemiBold"),
+      url("../font/Inter-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-Bold"),
+      url("../font/Inter-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter-ExtraBold"),
+      url("../font/Inter-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: "Inter", Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #242424;
+
+  --components-color: #3a3a3a;
+  --text-color: #f1f1f1;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -15,7 +93,7 @@
 
 html {
 	margin-right: calc(-1 * (100vw - 100%));
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 body {
@@ -24,16 +102,19 @@ body {
 }
 
 #root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 	margin: 0 auto;
 	padding: 1rem;
+  padding-bottom: 2rem;
 
 	min-width: 320px;
-	max-width: 1000px;
+	max-width: 1837px;
 	width: 100%;
 
 	min-height: 100vh;
 
-	display: flex;
 	flex-direction: column;
 }
 

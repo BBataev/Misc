@@ -1,33 +1,38 @@
 .usersPage {
-	color: bisque;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--text-color);
+}
+
+.startInfo__title {
+	margin: 0 auto 0 0;
+}
+
+.usersPage__startInfo {
+	display: flex;
+	width: 100%;
 }
 
 .users__usersList {
 	display: flex;
+	width: 80%;
 	flex-wrap: wrap;
 	gap: 10px;
-}
-
-
-.users a:hover {
-	color: rgb(162, 171, 187);
-}
-
-.users button {
-	text-align: left;
-	color: cornflowerblue;
-}
-
-.users button:hover {
-	text-align: left;
-	color: rgb(72, 111, 184);
 }
 
 .link {
 	display: flex;
 	align-items: center;
 	gap: 16px;
+	color: var(--text-color);
+	transition: color .1s ease-in-out;
 }
+
+.link:hover {
+	color: rgb(162, 171, 187);
+}
+
 
 .link__userPhoto {
 	width: 45px;
@@ -35,6 +40,7 @@
 }
 
 .link__username {
+	font-weight: 300;
 	font-size: 24px;
-	width: 255px;
+	width: 270px;
 }
