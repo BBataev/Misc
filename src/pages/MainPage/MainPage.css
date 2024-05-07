@@ -1,0 +1,16 @@
+.mainPage__title {
+    margin: 0;
+    margin-bottom: 45px;
+    padding-left: 28px;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.mainPage__descr {
+    margin: 0;
+    margin-bottom: 53px;
+    font-size: 23px;
+    font-weight: 300;
+    color: var(--text-color);
+}

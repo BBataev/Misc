@@ -2,11 +2,13 @@
 	width: 95%;
 	display: flex;
 	gap: 124px;
-	flex-grow: 1;
 }
 
 .content {
-	border-radius: 10px;
+	flex-shrink: 0;
+	width: 73%;
+	height: 80vh;
+	border-radius: 15px;
 	padding: 42px 88px;
 	color: var(--text-color);
 	background-color: var(--components-color);
@@ -19,7 +21,7 @@
 	width: 100%;
 	height: 70px;
 	margin-bottom: 57px;
-	border-radius: 5px;
+	border-radius: 15px;
 	padding: 10px;
 	background-color: var(--components-color);
 }
@@ -32,11 +34,13 @@
 
 /* NavMenu */
 .navMenu {
+	position: relative;
 	display: flex;
 	flex-shrink: 0;
 	flex-direction: column;
-	border-radius: 10px;
+	border-radius: 15px;
 	width: 318px;
+	height: 65vh;
 	padding: 54px 10px;
 	gap: 44px;
 	background-color: var(--components-color);
@@ -46,4 +50,28 @@
 	padding-left: 58px;
 	font-size: 32px;
 	color: var(--text-color);
+	z-index: 1;
+}
+
+.navMenu__indicator {
+	position: absolute;
+	left: 45px;
+	top: 48px;
+	width: 211px;
+	height: 61px;
+	border-radius: 15px;
+	background-color: #fd6565;
+	transition: transform .2s ease-in-out;
+}
+
+.navMenu .navMenu__link:nth-child(1).active ~ .navMenu__indicator {
+	transform: translateY(calc(92px * 0));
+}
+
+.navMenu .navMenu__link:nth-child(2).active ~ .navMenu__indicator {
+	transform: translateY(calc(92px * 1));
+}
+
+.navMenu .navMenu__link:nth-child(3).active ~ .navMenu__indicator {
+	transform: translateY(calc(92px * 2));
 }
