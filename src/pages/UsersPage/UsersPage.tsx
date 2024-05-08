@@ -28,6 +28,7 @@ export function UsersPage() {
             type="text"
             value={searchName}
             onChange={handleSearchName}
+            placeholder="Enter name"
           />
         </label>
       </div>

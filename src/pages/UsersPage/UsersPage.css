@@ -7,6 +7,9 @@
 
 .startInfo__title {
 	margin: 0 auto 0 0;
+	font-size: 40px;
+	font-weight: 300;
+	padding-left: 28px;
 }
 
 .usersPage__startInfo {
@@ -24,6 +27,34 @@
 	gap: 10px;
 	overflow: hidden;
 	overflow-y: auto;
+}
+
+.startInfo__search {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.search__title {
+	margin: 0;
+	padding-left: 17px;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 19px;
+}
+
+.search__input {
+	font-family: "Inter";
+	border: none;
+	border-radius: 5px;
+	padding: 14px 33px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #565656;
+}
+
+.search__input:focus {
+	outline: none;
 }
 
 .link {

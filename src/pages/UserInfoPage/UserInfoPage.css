@@ -1,0 +1,38 @@
+.user__topInfo {
+    display: flex;
+    align-items: center;
+    gap: 99px;
+    margin: 30px 0 100px;
+    color: var(--text-color);
+}
+
+.topInfo__avatar {
+    border-radius: 50%;
+}
+
+.userInfo__name {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.userInfo__job {
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: 200;
+    color: #d2d2d2;
+}
+
+.userInfo__email {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 200;
+    color: #d2d2d2;
+}
+
+.user__bio {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-color);
+}

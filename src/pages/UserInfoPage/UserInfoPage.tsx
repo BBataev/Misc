@@ -19,16 +19,24 @@ export function UserInfoPage() {
 	}
 
 	return (
-		<div className="userInfoPage">
-			<h2>UserInfoPage</h2>
-
-			<div className="users">
-				<p>{user.jobTitle}</p>
-				<p>{user.email}</p>
-				<img src={user.avatar} alt="" width={200} height={200} />
-				<p>{user.fullName}</p>
-				<p>{user.bio}</p>
+		<div className="user">
+			<div className="user__topInfo">
+				<img className="topInfo__avatar" src={user.avatar} alt="User's avatar" width={250} height={250} />
+				<div className="topInfo__userInfo">
+					<p className="userInfo__name">
+						{user.fullName}
+					</p>
+					<p className="userInfo__job">
+						{user.jobTitle}
+					</p>
+					<p className="userInfo__email">
+						{user.email}
+					</p>
+				</div>
 			</div>
+			<p className="user__bio">
+				{user.bio}
+			</p>
 		</div>
 	);
 }
