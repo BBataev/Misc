@@ -3,6 +3,7 @@ import "./app.css";
 import { MainPage, UserInfoPage, UsersPage } from "./pages";
 import { Playlists } from "./pages/PlaylistsPage/PlaylistsPage";
 import { useEffect, useState } from "react";
+import { PlaylistInfoPage } from "./pages/PlaylistInfoPage/PlaylistInfoPage";
 
 export function App() {
   const [active, setActive] = useState([false, false, false]);
@@ -72,6 +73,7 @@ export function App() {
             <Route path="/users" element={<UsersPage />} />
             <Route path="/users/:userId" element={<UserInfoPage />} />
             <Route path="/playlists" element={<Playlists />} />
+            <Route path="/playlists/:playlistId" element={<PlaylistInfoPage />} />
           </Routes>
         </main>
       </div>
