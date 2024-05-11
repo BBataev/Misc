@@ -4,7 +4,7 @@ export function MainPage() {
 	return (
 		<div className="mainPage">
 			<h2 className="mainPage__title">
-				MainPage
+				Main
 			</h2>
 
 			<p className="mainPage__descr">

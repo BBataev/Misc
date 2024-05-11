@@ -24,11 +24,11 @@ export const PlaylistInfoPage = () => {
       </div>
       <div className="playlist-songs">
         {playlist.songs.map((song, index) => {
-            return (
-                <p className="songs__song" key={index}>
-                    {song}
-                </p>
-            )
+          return (
+            <p className="songs__song" key={index}>
+              {song}
+            </p>
+          );
         })}
       </div>
     </div>

@@ -1,26 +1,25 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react"; // Импортируем useState
 import { PLAYLISTS } from "../../data";
 import { Link, useSearchParams } from "react-router-dom";
 
-import "./PlaylistsPage.css"
+import "./PlaylistsPage.css";
 
 export const Playlists = () => {
-  const [searchNameParam, setSearchNameParam] = useSearchParams();
-  const [searchGenreParam, setSearchGenreParam] = useSearchParams();
-
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchName, setSearchName] = useState(searchParams.get("searchName") || ""); 
+  const [searchGenre, setSearchGenre] = useState(searchParams.get("searchGenre") || "");
+  
   const handleSearchName = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
-    setSearchNameParam({ searchName: value.toLowerCase() });
+    setSearchName(value);
+    setSearchParams((params) => ({ ...params, searchName: value.toLowerCase() }));
   };
 
   const handleSearchGenre = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
-    setSearchGenreParam({ searchGenre: value.toLowerCase() });
+    setSearchGenre(value);
+    setSearchParams((params) => ({ ...params, searchGenre: value.toLowerCase() }));
   };
-
-
-  const searchName = searchNameParam.get("searchName") || "";
-  const searchGenre = searchGenreParam.get("searchGenre") || "";
 
   const filteredPlaylists = PLAYLISTS.filter(({ name, genre }) =>
     name.toLowerCase().includes(searchName) && genre.toLowerCase().includes(searchGenre) && (genre !== "Non Music" && name !== "")
@@ -61,7 +60,6 @@ export const Playlists = () => {
         ))
       }
       </div>
-
     </div>
   );
 };
