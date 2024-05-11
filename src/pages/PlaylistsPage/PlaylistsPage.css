@@ -5,6 +5,19 @@
 	color: var(--text-color);
 }
 
+.playlistsPage__startInfo {
+	display: flex;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.startInfo__title {
+	margin: 0 auto 0 0;
+	font-size: 40px;
+	font-weight: 300;
+	padding-left: 28px;
+}
+
 .search-filters {
     display: flex;
     gap: 34px;

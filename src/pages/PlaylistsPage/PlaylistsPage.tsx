@@ -8,7 +8,7 @@ export const Playlists = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchName, setSearchName] = useState(searchParams.get("searchName") || ""); 
   const [searchGenre, setSearchGenre] = useState(searchParams.get("searchGenre") || "");
-  
+
   const handleSearchName = (event: ChangeEvent<HTMLInputElement>): void => {
     const { value } = event.target;
     setSearchName(value);
@@ -27,7 +27,7 @@ export const Playlists = () => {
 
   return (
     <div className="playlistsPage">
-      <div className="usersPage__startInfo">
+      <div className="playlistsPage__startInfo">
         <h2 className="startInfo__title">Playlists</h2>
         <label className="startInfo__search">
           <h4 className="search__title">Fast Search</h4>
